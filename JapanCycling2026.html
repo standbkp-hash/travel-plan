@@ -3,338 +3,536 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日本瀨戶內海與四國單車大環線行程規劃</title>
+    <title>【14天極限壯遊】2026 瀨戶內海與四國單車大環線報告</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #f8fafc;
-        }
-        .timeline-line {
-            width: 4px;
-            background: linear-gradient(to bottom, #3b82f6, #10b981);
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 24px;
-            z-index: 0;
-        }
-        @media (min-width: 768px) {
-            .timeline-line {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .timeline-line { width: 4px; background: linear-gradient(to bottom, #3b82f6, #10b981, #f59e0b, #ef4444); position: absolute; top: 0; bottom: 0; left: 44px; z-index: 0; }
+        @media (min-width: 768px) { .timeline-line { left: 50%; transform: translateX(-50%); } }
+        .ferry-card { border-left: 4px solid #3b82f6; background-color: #f0f9ff; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .day-badge { background: #1e293b; color: white; padding: 4px 12px; border-radius: 9999px; font-weight: 700; font-size: 0.875rem; }
     </style>
 </head>
-<body class="text-slate-800 antialiased">
+<body class="text-slate-800 antialiased pb-20">
 
     <!-- Header Section -->
     <header class="bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=2000&q=80');"></div>
         <div class="container mx-auto px-6 py-20 relative z-10 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-wider">日本瀨戶內海與四國單車大環線</h1>
-            <p class="text-xl md:text-2xl font-light text-slate-300 mb-8">跨越海峽、山徑與最後清流的 10 天 9 夜史詩旅程</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">日本單車大環線：14天壯遊報告</h1>
+            <p class="text-xl md:text-2xl font-light text-slate-300 max-w-3xl mx-auto mb-8">
+                2026/09/17 - 09/30 | 對接長榮 BR110/109 | 渡輪 Roll-on 友善版
+            </p>
             
-            <div class="flex flex-wrap justify-center gap-6 mt-8">
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center gap-3">
-                    <i data-lucide="map" class="w-6 h-6 text-blue-400"></i>
+            <div class="flex flex-wrap justify-center gap-6 mt-10">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 flex items-center gap-3 border border-white/20 shadow-xl min-w-[220px]">
+                    <i data-lucide="plane-landing" class="w-8 h-8 text-emerald-400"></i>
                     <div class="text-left">
-                        <p class="text-xs text-slate-400">總距離</p>
-                        <p class="font-semibold text-lg">約 900 km</p>
+                        <p class="text-[10px] text-emerald-200 uppercase font-bold tracking-widest">去程 BR110</p>
+                        <p class="font-bold text-sm">TPE 06:50 ➔ MYJ 10:15</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center gap-3">
-                    <i data-lucide="calendar" class="w-6 h-6 text-emerald-400"></i>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 flex items-center gap-3 border border-white/20 shadow-xl min-w-[220px]">
+                    <i data-lucide="plane-takeoff" class="w-8 h-8 text-emerald-400"></i>
                     <div class="text-left">
-                        <p class="text-xs text-slate-400">總天數</p>
-                        <p class="font-semibold text-lg">10 天 9 夜</p>
+                        <p class="text-[10px] text-emerald-200 uppercase font-bold tracking-widest">回程 BR109</p>
+                        <p class="font-bold text-sm">MYJ 11:25 ➔ TPE 13:05</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center gap-3">
-                    <i data-lucide="bike" class="w-6 h-6 text-orange-400"></i>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 flex items-center gap-3 border border-white/20 shadow-xl min-w-[220px]">
+                    <i data-lucide="route" class="w-8 h-8 text-blue-400"></i>
                     <div class="text-left">
-                        <p class="text-xs text-slate-400">每日平均</p>
-                        <p class="font-semibold text-lg">90 - 110 km</p>
+                        <p class="text-[10px] text-blue-200 uppercase font-bold tracking-widest">預估總里程</p>
+                        <p class="font-bold text-sm">約 1,050 km</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Map Overview Link -->
-    <section class="bg-white shadow-sm border-b border-slate-200">
-        <div class="container mx-auto px-6 py-6 flex justify-center">
-            <a href="https://www.google.com/maps/dir/松山空港+(愛媛縣)/吳港+(廣島縣)/廣島市/岩國市/防府市/門司港/宇佐市/大分市/宇和島市/四萬十市/高知市/松山市/" target="_blank" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition-all shadow-md hover:shadow-lg">
-                <i data-lucide="map-pinned" class="w-5 h-5"></i>
-                查看全線大環線地圖預覽 (Google Maps)
+    <!-- Map Nav Sticky -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <span class="text-slate-900 font-bold text-lg">每日行程軸線與導航資訊</span>
+            <a href="https://www.google.com/maps/dir/Matsuyama+Airport,+Ehime,+Japan/Hiroshima,+Japan/Hofu,+Yamaguchi,+Japan/Beppu,+Oita,+Japan/Uwajima,+Ehime,+Japan/Cape+Ashizuri,+Kochi,+Japan/Kochi,+Japan/Matsuyama+Airport,+Ehime,+Japan" target="_blank" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full transition-all text-sm shadow-lg">
+                <i data-lucide="map-pinned" class="w-4 h-4"></i>
+                預覽 14 天全環線 Google Maps 地圖
             </a>
         </div>
-    </section>
+    </nav>
 
     <!-- Itinerary Timeline -->
-    <main class="container mx-auto px-4 py-16 relative">
+    <main class="container mx-auto px-4 py-16 relative max-w-6xl">
         <div class="timeline-line hidden md:block"></div>
 
-        <div class="space-y-12 relative z-10">
-            <!-- Day 1 -->
+        <div class="space-y-16 relative z-10">
+            
+            <!-- Day 1 (Left) -->
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
                 <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 relative hover:shadow-xl transition-shadow">
                         <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 1: 抵達松山 — 跨海進入廣島</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">70 km</span>
+                            <h3 class="text-2xl font-bold text-slate-800">Day 1: 抵達松山 ➔ 跨海廣島</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/17 (四) | 約 40 km</span>
                         </div>
-                        <p class="text-slate-600 mb-4">抵達松山後，前往「松山觀光港」搭乘渡輪橫越瀨戶內海抵達廣島縣吳市。騎乘穿梭於吳市造船重鎮與廣島市區，探訪和平紀念公園，傍晚抵達宮島口或岩國市。</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：松山機場 → 松山觀光港(渡輪) → 吳港 → 廣島市 → 岩國市</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：岩國市 或 廿日市(宮島口周邊)</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：吳市大和博物館、廣島和平紀念公園、瀨戶內海島波</li>
-                        </ul>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            10:15 抵達松山機場。預留時間通關與組車後，前往「松山觀光港」搭乘渡輪橫越瀨戶內海抵達吳市。騎乘穿梭於造船重鎮與海岸線，傍晚抵達廣島市區。
+                        </p>
 
-                        <!-- 渡輪資訊區塊 (Day 1) -->
-                        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6 text-sm text-slate-700 text-left">
-                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><i data-lucide="ship" class="w-4 h-4 text-blue-500"></i> 瀨戶內海汽船/石崎汽船 (松山觀光港 → 吳港) 航班參考</h4>
-                            <p class="text-xs text-slate-500 mb-2">請搭乘「汽車渡輪(Cruise Ferry)」，單車可直接上船，航程約 1 小時 55 分：</p>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center font-medium mb-2">
-                                <div class="bg-white py-1 rounded border">06:45</div>
-                                <div class="bg-white py-1 rounded border">08:25</div>
-                                <div class="bg-white py-1 rounded border">09:35</div>
-                                <div class="bg-white py-1 rounded border">11:55</div>
-                                <div class="bg-white py-1 rounded border">14:10</div>
-                                <div class="bg-white py-1 rounded border">15:55</div>
-                            <div class="bg-white py-1 rounded border">18:05</div>
-                            <div class="bg-white py-1 rounded border">19:40</div>
-                        </div>
-                        <p class="text-xs text-right text-blue-600 hover:underline"><a href="https://setonaikaikisen.co.jp/" target="_blank">查看瀨戶內海汽船官網最新班表</a></p>
-                    </div>
-
-                    <a href="https://www.google.com/maps/dir/松山空港+(愛媛縣)/松山觀光港/吳港+(廣島縣)/廣島和平紀念公園/岩國錦帶橋/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                        <i data-lucide="navigation" class="w-4 h-4"></i> Day 1 導航路線
-                    </a>
-                </div>
-            </div>
-            <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-blue-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">1</div>
-                <div class="w-full md:w-1/2 md:pl-12"></div>
-            </div>
-
-            <!-- Day 2 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div class="w-full md:w-1/2 md:pr-12"></div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-blue-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">2</div>
-                <div class="w-full md:w-1/2 md:pl-12 text-left">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 2: 山口岩國與瀨戶內海西行</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">90 km</span>
-                        </div>
-                        <p class="text-slate-600 mb-4">早上探訪日本三大名橋之一的「岩國錦帶橋」，接著一路沿著山口縣優美的海岸線往西騎乘。途經保留江戶時代風貌的柳井白壁通，最終抵達防府市。</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：岩國市 → 柳井 → 防府市</li>
-                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：防府市</li>
-                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：岩國錦帶橋、柳井白壁通、防府天滿宮</li>
-                        </ul>
-                        <a href="https://www.google.com/maps/dir/岩國錦帶橋/柳井白壁之町並/防府天滿宮/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 2 導航路線
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 3 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 3: 跨越關門海峽</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">100 km</span>
-                        </div>
-                        <p class="text-slate-600 mb-4">本州最後一段路程。抵達下關後，我們將牽著單車步行穿越著名的「關門隧道人行道」，從海底跨越海峽進入九州的門司港。</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：防府市 → 下關 → (人行隧道) → 門司港</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：北九州市 (門司港/小倉)</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：關門隧道人行道、門司港懷舊區</li>
-                        </ul>
-                        <a href="https://www.google.com/maps/dir/防府市/關門隧道人行道(下關側)/門司港懷舊/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 3 導航路線
-                        </a>
-                    </div>
-                </div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-blue-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">3</div>
-                <div class="w-full md:w-1/2 md:pl-12"></div>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div class="w-full md:w-1/2 md:pr-12"></div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-blue-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">4</div>
-                <div class="w-full md:w-1/2 md:pl-12 text-left">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 4: 北九州海岸線</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">95 km</span>
-                        </div>
-                        <p class="text-slate-600 mb-4">沿著九州東部海岸線南下，這是一段平緩且充滿歷史氣息的路線。途經中津城，最後抵達擁有壯麗建築的宇佐神宮。</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：門司港 → 行橋 → 中津 → 宇佐市</li>
-                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：宇佐市</li>
-                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：中津城、宇佐神宮 (八幡總本宮)</li>
-                        </ul>
-                        <a href="https://www.google.com/maps/dir/門司港/中津城/宇佐神宮/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 4 導航路線
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 5 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 5: 溫泉之鄉</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">100 km</span>
-                        </div>
-                        <p class="text-slate-600 mb-4">繞經國東半島邊緣，經過高低起伏的杵築城下町，最終來到日本溫泉湧出量第一的別府。晚上可好好泡湯舒緩前幾天的疲勞。</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：宇佐市 → 杵築 → 別府 → 大分市</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：別府溫泉 或 大分市</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：別府地獄溫泉、杵築坡道城下町</li>
-                        </ul>
-                        <a href="https://www.google.com/maps/dir/宇佐神宮/杵築城/別府地獄/大分市/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 5 導航路線
-                        </a>
-                    </div>
-                </div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">5</div>
-                <div class="w-full md:w-1/2 md:pl-12"></div>
-            </div>
-
-            <!-- Day 6 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div class="w-full md:w-1/2 md:pr-12"></div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">6</div>
-                <div class="w-full md:w-1/2 md:pl-12 text-left">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 6: 回到四國起點</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">110 km</span>
-                        </div>
-                        <p class="text-slate-600 mb-4">從大分佐賀關搭乘「國道九四渡輪」回到四國最西端的三崎港。接著挑戰起伏劇烈但風景極佳的「佐田岬 Melody Line」，抵達宇和島。</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：大分 → 佐賀關港(渡輪) → 三崎港 → 佐田岬 → 宇和島</li>
-                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：宇和島市</li>
-                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：九四渡輪、佐田岬燈塔、宇和島城</li>
-                        </ul>
-
-                        <!-- 渡輪資訊區塊 (Day 6) -->
-                        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6 text-sm text-slate-700 text-left">
-                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><i data-lucide="ship" class="w-4 h-4 text-blue-500"></i> 國道九四渡輪 (佐賀關港 → 三崎港) 航班參考</h4>
-                            <p class="text-xs text-slate-500 mb-2">航線最短、效率最高的跨海方式，航程約 70 分鐘：</p>
-                            <div class="grid grid-cols-2 gap-2 text-center font-medium mb-2">
-                                <div class="bg-white py-1 rounded border text-emerald-600">首班發船：07:00</div>
-                                <div class="bg-white py-1 rounded border text-rose-600">末班發船：23:00</div>
-                                <div class="col-span-2 bg-white py-2 rounded border text-slate-700">每日 07:00 至 23:00，<strong class="text-blue-600">每小時整點發船</strong> (班次極密集)</div>
+                        <!-- Ferry Info -->
+                        <div class="ferry-card p-4 mb-6 text-left border border-blue-100">
+                            <h4 class="text-sm font-bold text-blue-800 mb-2 flex items-center justify-between">
+                                <span><i data-lucide="ship" class="w-4 h-4 inline mr-1 text-blue-600"></i> 石崎汽船 (單車免拆車)</span>
+                                <a href="https://setonaikaikisen.co.jp/" target="_blank" class="text-blue-500 hover:underline"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </h4>
+                            <p class="text-xs text-slate-500 mb-3">請搭乘汽車渡輪(Cruise Ferry)，航程約 1 小時 55 分。</p>
+                            <div class="grid grid-cols-2 gap-2 text-center text-xs">
+                                <div class="bg-white p-2 rounded border border-blue-300 shadow-sm relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-[8px] px-1 rounded-bl">推薦班次</div>
+                                    <span class="block font-bold text-blue-700">14:10 發</span>
+                                    <span class="text-slate-500">16:05 抵達吳港</span>
+                                </div>
+                                <div class="bg-white p-2 rounded border border-slate-200 text-slate-400">
+                                    <span class="block font-bold">15:55 發</span>
+                                    <span>17:50 抵達吳港</span>
+                                </div>
                             </div>
-                            <p class="text-xs text-right text-blue-600 hover:underline"><a href="https://www.kokuq4.jp/" target="_blank">查看國道九四渡輪官網</a></p>
                         </div>
 
-                        <a href="https://www.google.com/maps/dir/大分市/佐賀關港/三崎港/宇和島城/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 6 導航路線
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 7 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 7: 最後的清流</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">100 km</span>
-                        </div>
-                        <p class="text-slate-600 mb-4">離開海線進入山區，沿著國道 381 號伴隨「日本最後清流」四萬十川騎乘。親自將單車騎上無欄杆的沈下橋，感受與大自然融為一體的體驗。</p>
                         <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：宇和島市 → 四萬十川(國道381) → 四萬十市</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：四萬十市 (中村)</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：四萬十川、岩間沈下橋、勝間沈下橋</li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>松山機場 ➔ 松山觀光港 ➔ 吳港 ➔ 廣島市</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>廣島市區 (中區或和平公園周邊)</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>吳市潛水艇風光、廣島燒</span></li>
                         </ul>
-                        <a href="https://www.google.com/maps/dir/宇和島市/岩間沈下橋/四萬十市/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 7 導航路線
-                        </a>
+
+                        <div class="md:text-right">
+                            <a href="https://www.google.com/maps/dir/Matsuyama+Airport,+Ehime,+Japan/Matsuyama+Kanko+Port,+Ehime,+Japan/Kure+Port,+Hiroshima,+Japan/Hiroshima+Peace+Memorial+Park,+Hiroshima,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 1 導航路線
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-orange-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">7</div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-blue-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">1</div>
                 <div class="w-full md:w-1/2 md:pl-12"></div>
             </div>
 
-            <!-- Day 8 -->
+            <!-- Day 2 (Right) -->
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
                 <div class="w-full md:w-1/2 md:pr-12"></div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-orange-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">8</div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-blue-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">2</div>
                 <div class="w-full md:w-1/2 md:pl-12 text-left">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 relative hover:shadow-xl transition-shadow">
                         <div class="flex items-center justify-between gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 8: 南土佐太平洋岸</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">115 km</span>
+                            <h3 class="text-2xl font-bold text-slate-800">Day 2: 廣島深度觀光 (休整日)</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/18 (五) | 市區慢遊</span>
                         </div>
-                        <p class="text-slate-600 mb-4">順著四萬十川出海口向東，沿著壯麗的太平洋海岸線前進。途經開闊的入野海岸，並在傍晚抵達高知市，探訪著名的桂濱。</p>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            今日暫緩長途騎乘。廣島市區地勢平坦，非常適合騎著單車穿梭於各大歷史景點與綠意盎然的市區街道，深度感受這座重生的城市。
+                        </p>
+
                         <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：四萬十市 → 黑潮町 → 須崎市 → 高知市</li>
-                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：高知市</li>
-                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：入野海岸、桂濱 (坂本龍馬像)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>廣島市區全日慢遊</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>廣島市區 (續住)</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>和平紀念公園、原爆圓頂、廣島城、縮景園</span></li>
                         </ul>
-                        <a href="https://www.google.com/maps/dir/四萬十市/入野海岸/桂濱/高知市/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 8 導航路線
-                        </a>
+
+                        <div>
+                            <a href="https://www.google.com/maps/search/Hiroshima+City+Attractions,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> 廣島市區地圖
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 9 -->
+            <!-- Day 3 (Left) -->
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
                 <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 relative hover:shadow-xl transition-shadow">
                         <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 9: 縱貫四國山地大魔王</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">125 km</span>
+                            <h3 class="text-2xl font-bold text-slate-800">Day 3: 宮島參拜 ➔ 日本名橋</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/19 (六) | 約 60 km</span>
                         </div>
-                        <p class="text-slate-600 mb-4">全線最艱難也最壯麗的一天。從高知直接往西穿越四國山地回到松山。途中欣賞擁有奇蹟清流之稱的「仁淀藍」，並挑戰最高點三坂峠(海拔約700m)。抵達松山後以道後溫泉犒賞自己。</p>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            向西騎行抵達宮島口，搭渡輪登島參拜嚴島神社與海上大鳥居。下午跨越縣界進入山口縣，探訪名列日本三大名橋的「岩國錦帶橋」。
+                        </p>
+
+                        <!-- Ferry Info -->
+                        <div class="ferry-card p-4 mb-6 text-left border border-blue-100">
+                            <h4 class="text-sm font-bold text-blue-800 mb-2 flex items-center justify-between">
+                                <span><i data-lucide="ship" class="w-4 h-4 inline mr-1 text-blue-600"></i> JR 宮島連絡船</span>
+                                <a href="https://jr-miyajimaferry.co.jp/timetable/" target="_blank" class="text-blue-500 hover:underline"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </h4>
+                            <p class="text-xs text-slate-600">每 15 分鐘一班。單車免裝袋。JR 船隻航線會刻意繞行靠近海上大鳥居正前方。</p>
+                        </div>
+
                         <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：高知市 → 仁淀川(國道33) → 三坂峠 → 松山市</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500"></i> 住宿：松山市 (道後溫泉區)</li>
-                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：仁淀川、三坂峠爬坡、道後溫泉本館</li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>廣島市 ➔ 宮島口(渡輪) ➔ 岩國錦帶橋</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>岩國市內</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>嚴島神社、海上大鳥居、岩國錦帶橋</span></li>
                         </ul>
-                        <a href="https://www.google.com/maps/dir/高知市/名越屋沈下橋/三坂峠/道後溫泉/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 9 導航路線
-                        </a>
+
+                        <div class="md:text-right">
+                            <a href="https://www.google.com/maps/dir/Hiroshima,+Japan/Miyajimaguchi+Ferry+Terminal,+Hiroshima,+Japan/Kintaikyo+Bridge,+Iwakuni,+Yamaguchi,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 3 導航路線
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-red-500 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">9</div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-blue-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">3</div>
                 <div class="w-full md:w-1/2 md:pl-12"></div>
             </div>
 
-            <!-- Day 10 -->
+            <!-- Day 4 (Right) -->
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
                 <div class="w-full md:w-1/2 md:pr-12"></div>
-                <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-slate-800 rounded-full border-4 border-white shadow transform md:-translate-x-1/2 flex items-center justify-center text-white text-xs font-bold z-10">10</div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-emerald-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">4</div>
                 <div class="w-full md:w-1/2 md:pl-12 text-left">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-emerald-500 relative hover:shadow-xl transition-shadow">
                         <div class="flex items-center justify-between gap-4 mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Day 10: 城市散策與歸途</h3>
-                            <span class="bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">15 km</span>
+                            <h3 class="text-2xl font-bold text-slate-800">Day 4: 山口海岸線與白壁通</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/20 (日) | 約 95 km</span>
                         </div>
-                        <p class="text-slate-600 mb-4">輕鬆的最後一日。早上騎乘在松山市區，搭乘纜車或牽車登上松山城俯瞰市景，隨後前往松山機場搭機返家，結束完美的單車壯遊。</p>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            沿著優美的海岸線西行。中途經過掛滿金魚燈籠的「柳井白壁通」，傍晚抵達擁有日本三大天滿宮之一的防府市。
+                        </p>
+
                         <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500"></i> 起迄：松山市區 → 松山城 → 松山機場</li>
-                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500"></i> 亮點：松山城、少爺列車</li>
+                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>岩國市 ➔ 柳井市 ➔ 防府市</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>防府市</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>柳井白壁通古街、防府天滿宮</span></li>
                         </ul>
-                        <a href="https://www.google.com/maps/dir/道後溫泉/松山城/松山空港+(愛媛縣)/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Day 10 導航路線
-                        </a>
+
+                        <div>
+                            <a href="https://www.google.com/maps/dir/Kintaikyo+Bridge,+Iwakuni,+Yamaguchi,+Japan/Yanai+White+Wall+Cityscape,+Yamaguchi,+Japan/Hofu+Tenmangu,+Yamaguchi,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 4 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 (Left) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-emerald-500 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 5: 跨越隧道 ➔ 登陸九州</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/21 (一) | 約 100 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            本州路段終章。在下關唐戶市場品嚐海鮮，牽車步行穿越 780 公尺的海底隧道進入九州。迎面而來的是大正浪漫風情的門司港懷舊區。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>防府市 ➔ 下關 ➔ 關門隧道(推車) ➔ 門司港 ➔ 小倉</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>北九州市 (小倉或門司港)</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>唐戶市場河豚料理、關門海底隧道、門司港燒咖哩</span></li>
+                        </ul>
+
+                        <div class="md:text-right">
+                            <a href="https://www.google.com/maps/dir/Hofu,+Yamaguchi,+Japan/Karato+Market,+Shimonoseki,+Japan/Kanmon+Pedestrian+Tunnel,+Japan/Mojiko+Retro,+Kitakyushu,+Japan/Kokura+Station,+Fukuoka,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 5 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-emerald-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">5</div>
+                <div class="w-full md:w-1/2 md:pl-12"></div>
+            </div>
+
+            <!-- Day 6 (Right) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12"></div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-emerald-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">6</div>
+                <div class="w-full md:w-1/2 md:pl-12 text-left">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-emerald-500 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 6: 耶馬溪絕美單車道</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/22 (二) | 約 110 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            沿九州東岸南下。強烈建議繞行由廢棄鐵道改建的「中津耶馬溪自行車道」，享受日本最長石造連拱橋與深邃峽谷的視覺震撼。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>小倉 ➔ 行橋 ➔ 中津 ➔ 耶馬溪 ➔ 宇佐市</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>宇佐市</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>中津城、耶馬溪鐵道自行車道、宇佐神宮</span></li>
+                        </ul>
+
+                        <div>
+                            <a href="https://www.google.com/maps/dir/Kokura+Station,+Fukuoka,+Japan/Nakatsu+Castle,+Oita,+Japan/Yabakei+Bridge,+Oita,+Japan/Usa+Jingu,+Oita,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 6 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 7 (Left) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-emerald-500 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 7: 國東半島與別府地獄</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/23 (三) | 約 100 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            穿梭國東半島的寧靜小路，經過起伏的杵築坡道城下町，抵達全日本溫泉湧出量第一的別府。推薦展開「八大地獄巡禮」。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>宇佐市 ➔ 杵築 ➔ 別府溫泉</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>別府溫泉 (慰勞雙腿的最佳時機)</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>杵築城下町、別府八大地獄</span></li>
+                        </ul>
+
+                        <div class="md:text-right">
+                            <a href="https://www.google.com/maps/dir/Usa+Jingu,+Oita,+Japan/Kitsuki+Castle,+Oita,+Japan/Umi+Jigoku,+Beppu,+Oita,+Japan/Beppu+Station,+Oita,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 7 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-emerald-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">7</div>
+                <div class="w-full md:w-1/2 md:pl-12"></div>
+            </div>
+
+            <!-- Day 8 (Right) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12"></div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-orange-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">8</div>
+                <div class="w-full md:w-1/2 md:pl-12 text-left">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-orange-500 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 8: 橫渡海峽 ➔ 回歸四國</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/24 (四) | 約 115 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            從佐賀關港搭乘渡輪回到四國。下船後迎戰日本最長半島「佐田岬」，這是一段被稱為 Melody Line 的壯麗稜線，起伏劇烈但兩側海景無敵。
+                        </p>
+
+                        <!-- Ferry Info -->
+                        <div class="ferry-card p-4 mb-6 text-left border border-orange-100 bg-orange-50/50">
+                            <h4 class="text-sm font-bold text-orange-800 mb-2 flex items-center justify-between">
+                                <span><i data-lucide="ship" class="w-4 h-4 inline mr-1 text-orange-600"></i> 國道九四渡輪</span>
+                                <a href="https://www.kokuq4.jp/timetable/" target="_blank" class="text-orange-600 hover:underline"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </h4>
+                            <p class="text-xs text-slate-700">連接九州與四國最有效率的「海上國道」，單車 Roll-on 隨到隨上。</p>
+                            <div class="bg-white p-2 mt-3 rounded border border-orange-200 text-center text-xs font-bold text-orange-700">
+                                每日 07:00 ~ 23:00，每小時整點固定發船 (航程70分)
+                            </div>
+                        </div>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>別府 ➔ 佐賀關港 ➔ 三崎港 ➔ 佐田岬 ➔ 八幡濱</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>八幡濱市</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>佐田岬燈塔、Melody Line 景觀</span></li>
+                        </ul>
+
+                        <div>
+                            <a href="https://www.google.com/maps/dir/Beppu+Station,+Oita,+Japan/Saganoseki+Port,+Oita,+Japan/Misaki+Port,+Ehime,+Japan/Sadamisaki+Lighthouse,+Ehime,+Japan/Yawatahama,+Ehime,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 8 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 9 (Left) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-orange-500 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 9: 南予慢活與宇和島城</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/25 (五) | 約 60 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            昨日大戰佐田岬後，今日安排輕鬆的恢復騎乘。探訪西予市卯之町的白壁群，下午抵達宇和島，參觀日本現存十二天守之一的宇和島城。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>八幡濱 ➔ 西予市(卯之町) ➔ 宇和島市</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>宇和島市</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>卯之町白壁、宇和島城、宇和島鯛魚飯</span></li>
+                        </ul>
+
+                        <div class="md:text-right">
+                            <a href="https://www.google.com/maps/dir/Yawatahama,+Ehime,+Japan/Uwa+Town+Townscape,+Seiyo,+Ehime,+Japan/Uwajima+Castle,+Ehime,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 9 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-orange-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">9</div>
+                <div class="w-full md:w-1/2 md:pl-12"></div>
+            </div>
+
+            <!-- Day 10 (Right) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12"></div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-orange-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">10</div>
+                <div class="w-full md:w-1/2 md:pl-12 text-left">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-orange-500 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 10: 四萬十川清流巡禮</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/26 (六) | 約 100 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            離開海線進入深山，沿著國道伴隨「日本最後清流」四萬十川南下。這是旅程中最純粹療癒的路段，您可以將單車直接騎上無欄杆的沈下橋。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>宇和島市 ➔ 四萬十川 ➔ 四萬十市(中村)</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>四萬十市 (中村地區)</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>四萬十川風光、岩間沈下橋、佐田沈下橋</span></li>
+                        </ul>
+
+                        <div>
+                            <a href="https://www.google.com/maps/dir/Uwajima,+Ehime,+Japan/Iwama+Chinkabashi,+Kochi,+Japan/Sada+Chinkabashi,+Kochi,+Japan/Nakamura+Station,+Shimanto,+Kochi,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 10 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 11 (Left) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-orange-600 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 11: 挺進極南 — 足摺岬</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/27 (日) | 約 80 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            專程南下挑戰四國極南點。沿著充滿亞熱帶風情的海岸線騎乘，抵達足摺岬。懸崖邊的白色燈塔與波濤洶湧的太平洋海浪，極具視覺震撼。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>四萬十市 ➔ 足摺岬 ➔ 土佐清水</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>土佐清水 或 足摺溫泉區</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>足摺岬燈塔、金剛福寺、無敵海景</span></li>
+                        </ul>
+
+                        <div class="md:text-right">
+                            <a href="https://www.google.com/maps/dir/Nakamura+Station,+Shimanto,+Kochi,+Japan/Cape+Ashizuri,+Kochi,+Japan/Tosashimizu,+Kochi,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 11 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-orange-600 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">11</div>
+                <div class="w-full md:w-1/2 md:pl-12"></div>
+            </div>
+
+            <!-- Day 12 (Right) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12"></div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-red-500 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">12</div>
+                <div class="w-full md:w-1/2 md:pl-12 text-left">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 12: 太平洋海岸長征</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/28 (一) | 約 135 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            今日路程較長，是一場沿著土佐灣不斷前進的挑戰。中途可於入野海岸沙灘旁小憩。傍晚抵達高知市區，絕對不能錯過在「弘人市場」大啖炙燒鰹魚。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>土佐清水 ➔ 須崎 ➔ 桂濱 ➔ 高知市</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>高知市區</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>入野海岸、桂濱(坂本龍馬像)、弘人市場</span></li>
+                        </ul>
+
+                        <div>
+                            <a href="https://www.google.com/maps/dir/Tosashimizu,+Kochi,+Japan/Irino+Coast,+Kochi,+Japan/Katsurahama,+Kochi,+Japan/Hirome+Market,+Kochi,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 12 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 13 (Left) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12 text-left md:text-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-600 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between md:justify-end gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 13: 仁淀藍與終極高峰</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/29 (二) | 約 120 km</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            全線體能挑戰最高峰。經由擁有奇蹟清流「仁淀藍」稱號的仁淀川挺進深山，翻越標高 700 公尺的三坂峠。最後俯衝回到松山市，浸泡千年古湯洗去疲憊。
+                        </p>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>高知市 ➔ 仁淀川 ➔ 三坂峠 ➔ 松山市</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="bed" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>住宿：</strong>松山市 (道後溫泉區)</span></li>
+                            <li class="flex items-center md:justify-end gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>仁淀川水色、三坂峠爬坡、道後溫泉本館</span></li>
+                        </ul>
+
+                        <div class="md:text-right">
+                            <a href="https://www.google.com/maps/dir/Hirome+Market,+Kochi,+Japan/Niyodo+River,+Kochi,+Japan/Misaka+Pass,+Ehime,+Japan/Dogo+Onsen,+Matsuyama,+Ehime,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 13 導航路線
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-red-600 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">13</div>
+                <div class="w-full md:w-1/2 md:pl-12"></div>
+            </div>
+
+            <!-- Day 14 (Right) -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                <div class="w-full md:w-1/2 md:pr-12"></div>
+                <div class="absolute left-6 md:left-1/2 w-10 h-10 bg-slate-800 rounded-full border-4 border-white transform md:-translate-x-1/2 flex items-center justify-center text-white font-bold shadow-xl z-20">14</div>
+                <div class="w-full md:w-1/2 md:pl-12 text-left">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-slate-800 relative hover:shadow-xl transition-shadow">
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-800">Day 14: 松山散策與賦歸</h3>
+                            <span class="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded text-sm">9/30 (三) | 市區至機場</span>
+                        </div>
+                        
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            旅程的尾聲。早上可搭乘少爺列車或登上松山城。隨後前往松山機場準備拆車託運，帶著 1,050 公里的壯遊榮耀返回台灣。
+                        </p>
+
+                        <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl mb-6">
+                            <h4 class="font-bold text-emerald-800 flex items-center gap-2 mb-2">
+                                <i data-lucide="plane-takeoff" class="w-5 h-5"></i> 航班 BR109 資訊
+                            </h4>
+                            <p class="text-sm text-emerald-700 font-bold mb-1">11:25 松山(MYJ) 起飛 ➔ 13:05 抵達 TPE</p>
+                            <p class="text-xs text-slate-500">※ 包含拆車作業時間，建議最遲於 09:25 前抵達機場航廈。</p>
+                        </div>
+
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>起迄：</strong>道後溫泉 ➔ 松山城 ➔ 松山機場</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i> <span><strong>亮點：</strong>松山城纜車、市區復古路面電車</span></li>
+                        </ul>
+
+                        <div>
+                            <a href="https://www.google.com/maps/dir/Dogo+Onsen,+Matsuyama,+Ehime,+Japan/Matsuyama+Castle,+Ehime,+Japan/Matsuyama+Airport,+Ehime,+Japan" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-bold text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Day 14 導航路線
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -342,16 +540,12 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 mt-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-2">專業單車旅行規劃建議</p>
-            <p class="text-sm">註：Google Maps 導航路線僅供參考，實際騎乘請依據當下路況與體能狀態適度調整，並注意隧道騎乘安全（特別是 Day 6 與 Day 9）。</p>
-        </div>
+    <footer class="text-center text-slate-400 mt-12 mb-8 text-sm space-y-2">
+        <p class="font-bold text-slate-500 tracking-widest uppercase">Epic Cycling Japan 2026</p>
+        <p>日本單車大環線行程報告 | 包含精確 Google Maps 導航與 Roll-on 渡輪資訊</p>
     </footer>
 
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
     </script>
 </body>
