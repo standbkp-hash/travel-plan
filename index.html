@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報告列表 (自動更新)</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 10px; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between; }
+        a { text-decoration: none; color: #0366d6; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        .meta { color: #666; font-size: 0.9em; }
+        #status { color: #d73a49; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>活動規劃報告索引清單</h1>
+    <p id="status">正在自動抓取檔案清單...</p>
+    <ul id="file-list"></ul>
+
+    <script>
+        /**
+         * ⚠️ 請修改以下資訊
+         */
+        const GITHUB_CONFIG = {
+            username: 'standbkp-hash', // 你的 GitHub 帳號
+            repo: 'THTS-Evaluation-report',  // 你的儲存庫名稱
+            branch: 'main'                    // 你的分支名稱 (通常是 main 或 master)
+        };
+
+        const fileListElement = document.getElementById('file-list');
+        const statusElement = document.getElementById('status');
+
+        async function fetchFiles() {
+            // 使用 GitHub REST API 獲取內容
+            const url = `https://api.github.com/repos/${GITHUB_CONFIG.username}/${GITHUB_CONFIG.repo}/contents/`;
+
+            try {
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error('無法從 GitHub 獲取資料，請檢查帳號或專案名稱是否正確。');
+                }
+
+                const files = await response.json();
+                
+                // 清空狀態文字
+                statusElement.innerText = '';
+
+                // 過濾檔案：只顯示 .html 且排除 index.html
+                const reportFiles = files.filter(file => 
+                    file.name.endsWith('.html') && 
+                    file.name !== 'index.html'
+                );
+
+                if (reportFiles.length === 0) {
+                    statusElement.innerText = '目前資料夾內沒有其他的 HTML 報告檔案。';
+                    return;
+                }
+
+                // 排序：依名稱排序
+                reportFiles.sort((a, b) => b.name.localeCompare(a.name));
+
+                // 渲染清單
+                reportFiles.forEach(file => {
+                    const li = document.createElement('li');
+                    
+                    // 檔案連結
+                    const a = document.createElement('a');
+                    a.href = file.name;
+                    a.innerText = file.name.replace('.html', ''); // 移除副檔名作為顯示名稱
+                    
+                    // 檔案大小資訊 (選填)
+                    const span = document.createElement('span');
+                    span.className = 'meta';
+                    span.innerText = `${(file.size / 1024).toFixed(1)} KB`;
+
+                    li.appendChild(a);
+                    li.appendChild(span);
+                    fileListElement.appendChild(li);
+                });
+
+            } catch (error) {
+                statusElement.innerText = `錯誤: ${error.message}`;
+                console.error(error);
+            }
+        }
+
+        // 執行抓取
+        fetchFiles();
+    </script>
+</body>
+</html>
